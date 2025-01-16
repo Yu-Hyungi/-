@@ -2,10 +2,11 @@
 const inputIDValue = document.getElementById('IDValue');
 const inputPWValue = document.getElementById('PWValue');
 
-// 버튼 클릭 이벤트
+// 로그인 버튼 클릭 이벤트
 SignButton.addEventListener('click', () => {
     const SignID = JSON.parse(localStorage.getItem('IDPW'));
     
+    //ID, PW 검사 
     if((inputIDValue.value)&&(SignID[inputIDValue.value]==inputPWValue.value)){
         location.href="main.html";
     }

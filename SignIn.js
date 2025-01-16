@@ -8,6 +8,8 @@ DuplicationCheck = 0;
 // 아이디 중복 버튼 클릭 이벤트
 dupID.addEventListener('click', () => {
     const ID = IDValue.value;
+    //JSON.parse(localStorage.getItem('IDPW')) 
+    //로컬스토리지에서 객체 불러오기
     if(JSON.parse(localStorage.getItem('IDPW'))){
         SignID = JSON.parse(localStorage.getItem('IDPW'));
     }
@@ -15,6 +17,7 @@ dupID.addEventListener('click', () => {
         SignID = {'':''};
     }
 
+    //.hasOwnProperty(ID) 객체 키, 값 있는지 검사
     if(SignID.hasOwnProperty(ID)){
         DuplicationCheck = 0;
         $('#cor').css('display', 'none');
@@ -27,10 +30,13 @@ dupID.addEventListener('click', () => {
     }
 });
 
+//회원가입 버튼 이벤트
 SignInButton.addEventListener('click', () => {
     if((DuplicationCheck == 1)&&(PWValue.value)){
         const ID = IDValue.value;
         SignID[ID] = PWValue.value;
+        //localStorage.setItem('IDPW', JSON.stringify(SignID))
+        //로컬스토리지에서 객체 불러오기
         localStorage.setItem('IDPW', JSON.stringify(SignID));
         alert('회원가입 되었습니다!');
         location.href="index.html";

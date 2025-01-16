@@ -1,0 +1,47 @@
+h1{
+    border-bottom: 1px black solid;
+    padding-bottom: 10px;
+    font-size: 35px;
+    margin-bottom: 0px;
+    
+}
+#outline{
+    border-right: 1px solid black;
+    margin: 0px;
+    padding-top: 100px;
+    padding-right: 5px;
+    padding-left: 20px;
+    font-size: 15px;
+    width: 110px;
+}
+
+#main li{
+    height: 10%;
+    margin-bottom: 20px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+#main{
+    padding: 0px;
+    padding-bottom: 50px;
+}
+h2{
+    border-bottom: 1px solid black;
+}
+h3{
+    border-bottom: 1px solid black;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+h4{
+    text-align: right;
+    font-size: 15px;
+    padding: 7px;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+

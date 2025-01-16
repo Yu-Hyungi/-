@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>(Yu)백준 답안지</title>
+        <link rel="stylesheet" href="cor.css"/>
+        <link rel="stylesheet" href="max850.css" media="screen and (max-width : 850px)"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="colors.js"></script>    
+    </head>
+
+    <body>
+        
+        <input type="button" value="day/night" onclick="togle(this)">
+        <h1><a href="index.html">BaekJoon</a></h1>
+        <div id="grid">
+            <ul id="outline">
+                <li><a href="25206.html">#25206</a></li>
+                <li><a href="1316.html">#1316</a></li>
+                <li><a href="2941.html">#2941</a></li>
+            </ul>
+            <div id = main>
+                <h2>#25206 너의 평점은</h2>
+                <pre>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(void) {
+    int N, i, z;
+    string Word;
+    cin >> N;
+    int Gword = N;
+    
+    for(i=0;i<N;i++){
+        cin >> Word;
+        for(z=0;z<(int)Word.length();z++){
+            if((int)Word.find(Word[z], z+1)>z+1){
+                Gword--;
+                break;
+            }
+        }
+    }
+    
+    cout << Gword;
+    
+    return 0;
+}
+                </pre>
+                <h4><a href="25206.html">문제</a></h3>
+            </div>
+            
+            
+        </div>
+
+        
+
+    </body>
+</html>

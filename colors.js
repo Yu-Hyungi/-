@@ -1,3 +1,6 @@
+
+document.getElementById('id').value = localStorage.getItem('ID');
+
 var tag={
     setbackgroundColor:function(tag, color){
         //document.querySelector(tag).style.backgroundColor=color;                   
@@ -46,3 +49,4 @@ function togle(self){
         self.value='night'
     }
 }
+

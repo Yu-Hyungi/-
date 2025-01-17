@@ -46,3 +46,11 @@ a{
     text-decoration: none;
 }
 
+#id{
+    margin-left: 70%;
+    border: none;
+    padding: 0px;
+    width: auto;
+}
+
+

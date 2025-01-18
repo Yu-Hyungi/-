@@ -5,6 +5,17 @@ const saveButton = document.getElementById('saveButton');
 const outputValue = document.getElementById('outputValue');
 DuplicationCheck = 0;
 
+
+function InitiallyIdSet(UserIdList){ //초기 ID 설정
+    const SignID = JSON.parse(localStorage.getItem(UserIdList));
+    if(!SignID){
+        const SignID = {'admin':'1234'};
+        localStorage.setItem('IDPW', JSON.stringify(SignID));
+    }
+}
+
+InitiallyIdSet('IDPW'); //초기 ID 설정
+
 // 아이디 중복 버튼 클릭 이벤트
 dupID.addEventListener('click', () => {
     const ID = IDValue.value;

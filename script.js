@@ -5,7 +5,10 @@ const inputPWValue = document.getElementById('PWValue');
 // 로그인 버튼 클릭 이벤트
 SignButton.addEventListener('click', () => {
     const SignID = JSON.parse(localStorage.getItem('IDPW'));
-
+    if(!SignID){
+        const SignID = {'admin':'1234'};
+        localStorage.setItem('IDPW', JSON.stringify(SignID));
+    }
     //ID, PW 검사 
     if((inputIDValue.value)&&(SignID[inputIDValue.value]==inputPWValue.value)){
         location.href="main.html";

@@ -3,22 +3,17 @@ const IDValue = document.getElementById('IDValue');
 const PWValue = document.getElementById('PWValue');
 const saveButton = document.getElementById('saveButton');
 const outputValue = document.getElementById('outputValue');
-
 DuplicationCheck = 0;
+
 // 아이디 중복 버튼 클릭 이벤트
 dupID.addEventListener('click', () => {
     const ID = IDValue.value;
     //JSON.parse(localStorage.getItem('IDPW')) 
     //로컬스토리지에서 객체 불러오기
-    if(JSON.parse(localStorage.getItem('IDPW'))){
-        SignID = JSON.parse(localStorage.getItem('IDPW'));
-    }
-    else{
-        SignID = {'':''};
-    }
+    SignID = JSON.parse(localStorage.getItem('IDPW'));
 
     //.hasOwnProperty(ID) 객체 키, 값 있는지 검사
-    if(SignID.hasOwnProperty(ID)){
+    if(SignID.hasOwnProperty(ID)||!ID||ID.search(' ')+1){
         DuplicationCheck = 0;
         $('#cor').css('display', 'none');
         $('#dup').css('display', 'inline');

@@ -5,14 +5,15 @@
         <title>(Yu)백준 답안지</title>
         <link rel="stylesheet" href="cor.css"/>
         <link rel="stylesheet" href="max850.css" media="screen and (max-width : 850px)"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="colors.js"></script>    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
     </head>
 
     <body>
         
-        <input type="button" value="day/night" onclick="togle(this)">
-        <h1><a href="index.html">BaekJoon</a></h1>
+        <input type="button" id = "button" value="day/night" onclick="togle(this)">
+        <input type="text" id = "id" value="admin">
+        <input type="button" id = "Exit" value="로그아웃" onclick="Logout(this)">
+        <h1><a href="main.html">BaekJoon</a></h1>
         <div id="grid">
             <ul id="outline">
                 <li><a href="25206.html">#25206</a></li>
@@ -54,6 +55,6 @@ int main(void) {
         </div>
 
         
-
+        <script src="colors.js"></script>  
     </body>
 </html>

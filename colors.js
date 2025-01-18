@@ -1,5 +1,23 @@
 
-document.getElementById('id').value = localStorage.getItem('ID');
+var Myid = document.getElementById('id');
+var UserId = localStorage.getItem('ID');
+Myid.value = UserId;
+
+if(!UserId){
+    location.href="index.html";
+}
+
+var len = Myid.value.length;
+$('#id').css('width', len*8);
+
+
+
+function Logout(self){
+    if(UserId){
+        location.href ="index.html";
+        localStorage.removeItem('ID');
+    }
+}
 
 var tag={
     setbackgroundColor:function(tag, color){

@@ -51,3 +51,9 @@ pre{
     padding: 20px;
 }
 
+#id{
+    margin-left: 70%;
+    border: none;
+    padding: 0px;
+    outline: none;
+}
